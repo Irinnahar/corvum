@@ -46,8 +46,6 @@ function App() {
       });
   }, []);
 
-  const onClickDetails = () => {};
-
   return (
     <Fragment>
       <Header />

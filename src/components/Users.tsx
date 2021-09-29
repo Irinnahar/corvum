@@ -8,13 +8,12 @@ interface users {
 export const Users: FunctionComponent<users> = ({ users }) => {
   return (
     <Fragment>
-      <Table striped bordered hover>
+      <Table striped bordered hover style={{ margin: '15px' }}>
         <thead>
           <tr>
             <th>Name</th>
             <th>Image</th>
             <th>Profile Link</th>
-            <th>Details</th>
           </tr>
         </thead>
         <tbody>
@@ -28,10 +27,12 @@ export const Users: FunctionComponent<users> = ({ users }) => {
                 />
               </td>
               <td>
-                <a href={user.html_url}>{user.html_url}</a>
-              </td>
-              <td>
-                <Button variant="dark">Details</Button>
+                <a
+                  style={{ color: 'black', textDecoration: 'none' }}
+                  href={user.html_url}
+                >
+                  {user.html_url}
+                </a>
               </td>
             </tr>
           ))}
